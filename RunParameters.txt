@@ -1,0 +1,43 @@
+######################################################################
+#  General Run Parameters                                            #
+#  NREADOUTDEVICES: # of DRS4 modules                                #
+#  NCHANNELS: # of channels per module                               #
+#  INVERTSIGNAL: negative signals need inverted before pedestals     #                                                                                                                                                        
+######################################################################
+
+RUNNAME               ZDCBeamTest
+NREADOUTDEVICES       5
+NTIMEBINS             1024
+NCHANNELS             4
+INVERTSIGNAL          NO
+
+######################################################################
+#  Set Cut Parameters (zero suppression cut)                                    
+#  ANALOG: RMS * NSIGMA
+#  BINARY: Static ADC Cut
+#  MINHITSIZE: minimum timebin width of expected pulses (cut applied)
+######################################################################
+
+CUTTYPE        ANALOG
+NSIGMA         5
+#CUTTYPE       BINARY
+BINARYCUT      75
+
+######################################################################
+#  Setup Input Files                                                 #
+#  Mapping file should be a text file with 4 columns: channel,       #
+#        padNo, invert signal                                        #
+######################################################################
+
+MAPPINGFILE        /data/phenix/software/rcdaqAnalysis/MappingFiles/ZDCBeamTestMapping.txt
+DEVICEMAPPINGFILE  /data/phenix/software/rcdaqAnalysis/MappingFiles/DeviceMapping.txt
+TREEDIRECTORY      /data/phenix/data/TestBeam2018/new_processed_runs/Scan10
+
+#####################################################################
+# Set Pedestal Parameters                                            #
+# Numbering convention: start from 0 and first and last ped time bin #
+#      are included in the range                                     #
+######################################################################
+
+FIRSTONLINEPEDTIMEBIN   5
+LASTONLINEPEDTIMEBIN    70

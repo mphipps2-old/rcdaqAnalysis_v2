@@ -1,0 +1,4 @@
+#discretization error for pulse offsets < 1 timebin 
+Par0 0.00586664
+Par1 -1.73667
+Par2 1.70388

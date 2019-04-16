@@ -1,0 +1,13 @@
+#pol5 coefficients to correct SRS nonlinearity
+
+#for noisy Mux1 external pulser setup: above 790 
+Par0 -245.367 
+Par1 1.33127
+
+#for normal Mux4 lab measurements: above 1250
+#Par0 -613.179
+#Par1 1.53238
+
+#for normal Mux1 lab measurements: above 800
+#Par0 -323.79 
+#Par1 1.44119
