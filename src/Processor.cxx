@@ -90,6 +90,7 @@ void Processor::LoadMapping() {
       fInvertSignal_v.push_back( (((TObjString*) myIter.Next())->GetString().Remove(TString::kBoth,' ')));
       fMinHitSize_v.push_back( (((TObjString*) myIter.Next())->GetString().Remove(TString::kBoth,' ')).Atoi());
     }
+    delete tokens;
   }
 
   // Device Mapping (ie packets corresponding to digitizer devices
@@ -103,8 +104,9 @@ void Processor::LoadMapping() {
     TObjArray *tokens = line.Tokenize(",");
     TIter myIter(tokens);
     while(TObjString *st = (TObjString*) myIter.Next()) {
-      fDeviceMapping_v.push_back( (((TObjString*) myIter.Next())->GetString().Remove(TString::kBoth,' ')).Atoi());        
+      fDeviceMapping_v.push_back( (((TObjString*) myIter.Next())->GetString().Remove(TString::kBoth,' ')).Atoi());   
     }
+    delete tokens;
   }
 }
 
