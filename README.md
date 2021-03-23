@@ -17,7 +17,7 @@ This program is meant to interface with RCDAQ and be used for monitoring and fir
 FAQ
 
 Question: "I'm using a new detector/readout board/reaout system. What do I need to change?"
-Answer: Almost all the configurable parameters are within the configuration file ("RunParameters.txt"). If you are adding a new readout system, you need to go to Processor::UnpackData() and define the packet number and iValue/rValue you receive from RCDAQ. You also may to go to the Processor constructor and define a new MaxADC value for your readout system. You will also have to add a mapping text file (you can use one of the mapping generator c scripts as a template to automate this process) and a calibration text file (if you want to calibrate each channel. Everything else should be transfer over. If it doesn't, you can contact me: phipps@bnl.gov.
+Answer: Almost all the configurable parameters are within the configuration file ("RunParameters.txt"). If you are adding a new readout system, you need to go to Processor::UnpackData() and define the packet number and iValue/rValue you receive from RCDAQ. You also may to go to the Processor constructor and define a new MaxADC value for your readout system. You will also have to add a mapping text file (you can use one of the mapping generator c scripts as a template to automate this process) and a calibration text file (if you want to calibrate each channel. Everything else should be transfer over. If it doesn't, you can contact me: mphipps2@illinois.edu.
 
 
 Description of the DAQ Modules
